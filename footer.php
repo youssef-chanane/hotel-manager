@@ -1,13 +1,12 @@
 <div class="footer">
             <div class="container">
-                <div id="row2">
+                <div class="row">
                     <div class="footer-col-1">
                         <h3>download our app</h3>
-                        <p>download our app for android and ios mobile phone</p>
-                        <div class="app-logo">
-                            <img src="images/play-store.png"><br>
-                            <img src="images/app-store.png">
-                        </div>
+                        <p>android 
+                            <i class="fab fa-app-store"></i>                    
+                        </p>
+                        <p>ios <i class="fab fa-android"></i></p>
                     </div>
 
                     <div class="footer-col-2">

@@ -1,3 +1,363 @@
+/*general*/
+*{
+    box-sizing: border-box;
+     max-width: 100%;
+     padding: 0;
+     margin: 0;
+ 
+ }
+ html{
+     width: 100%;
+ }
+ body {
+     overflow-x: hidden; /* Hide horizontal scrollbar */
+     width: 100%;
+     justify-content: center;
+     align-items: center;
+     font-family: 'Poppins', sans-serif;
+ }
+ ul{
+     list-style-type: none;
+ }
+ a {
+     text-decoration: none;
+     color: rgb(255, 255, 255);
+     font-size: large;
+     font-weight: 600;
+ }
+ h1 {
+    font-family: 'Impact', fantasy;
+    text-align: center;
+    color: white;
+    font-size: 4em;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+ /*header*/
+ header{
+     background:rgba(27, 146, 211, 0);
+     position:fixed ;
+     top:0;
+     width: 100%;
+     height: 9vh;
+     
+    }
+ nav {
+     overflow: hidden;
+     width: 100%;
+ }
+ 
+ header li {
+     float: right;
+     font-size: 1rem;
+ }
+ header li a {
+     display: block;
+     text-decoration: none;
+     padding: 13px 13px;
+     text-align: center;
+ }
+ 
+ #logo {
+     font-family: 'Dancing Script', cursive 100%;
+     font-weight: bold;
+     float: left;
+     display: flex;
+     margin: 0.2rem;
+ }
+
+ /*main page*/
+ /*vp*/
+.vp{
+    background: url(images/frame.jpg) center center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.vp h2{
+    /* margin-top: 10rem; */
+    /* flex-grow: 5; */
+    font-size: 2.8rem;
+}
+.vp h2,p{
+    width: 50%;
+    text-align: center;
+}
+.vp p{
+    /* margin-bottom: 5rem; */
+    line-height: 1.8rem;
+    font-size: 1.5rem;
+}
+.vp h2 span{
+    color: yellow;
+}
+/*best chambres*/
+/*vp-1*/
+.vp-1{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    background-color:#dfe6e9 ;
+    align-items: center;
+    justify-content: center;
+}
+.vp-1 h3{
+    margin-top: 1rem;
+}
+.container{
+    display: flex;
+}
+.container div img{
+    width: 100%;
+    height: 12rem;
+}
+.item{
+    background-color: white;
+    padding: 0px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+    width: 30%;
+    cursor: pointer;
+}
+.item:hover{
+    width: 35%;
+   height: 21rem;
+}
+.item p{
+    margin: 0.8rem 0;
+    width: 80%;
+}
+
+/*services*/
+section{
+    background-color: #2d3436;
+
+}
+.title{
+    margin: auto;
+    font-family: 'Impact', fantasy;
+    text-align: center;
+    font-size: 4em;
+    color: white;
+    
+}
+.services{
+    display: flex;
+    padding-bottom: 2rem;
+}
+.services img{
+    flex: 1;
+    width: 50%;
+    height: 60vh;
+}
+.services div{
+    background-color: #2d3436;
+    flex: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.services div h2{
+    margin-left: 3rem;
+    margin-right: 1rem;
+}
+.services div h2 span{
+    color: yellow;
+}
+.services div p{
+    margin-left: 3rem;
+    text-align: justify;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    width: 90%;
+}
+/*footer*/
+.footer{
+    background-color: #535c68;
+    color: #ffffff;
+    padding-bottom: 1rem;
+}
+.footer .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer .container .row{
+    margin: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.footer .container .row p{
+    margin: auto;
+}
+
+.app-logo{
+    margin-top: 20px;
+}
+
+.app-logo img{
+    width: 5%;
+    height: 5vh;
+}
+ /* @keyframes Gallerie {
+     0%
+     {
+         transform: translateX(0);
+     }
+     25%
+     {
+         transform: translateX(-640px);
+     }
+     50%
+     {
+         transform: translateX(-1280px);
+     }
+     75%
+     {
+         transform: translateX(-1920px);
+     }
+     100%
+     {
+         transform: translateX(0);
+     }
+ }
+ .output {
+     height: 300px;
+     overflow: hidden;
+ }
+ .output {
+     position: relative;
+     float: left;
+     background-color: white;
+     width: 110%;
+     overflow: hidden;
+     padding: 2em;
+ }
+ .output section {
+     height: 100%;
+     text-align: center;
+ }
+ .output section {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ #container {
+     background-color: #a3000815;
+     color: #000;
+     padding: 1rem;
+     margin-right: 300px;
+     border-radius: .5rem;
+     font: 1rem monospace;
+     width: 30%;
+     transition: margin-right 1s;
+ }
+ #default-example:hover>#container {
+     background-color: rgba(78, 52, 78, 0.336);
+     color: #f4f4f4;
+     margin-right: 25%;
+ }
+ .small-container{
+     max-width: 1080px;
+     margin: auto;
+     padding-left: 25px;
+     padding-right: 25px;
+ 
+ }
+ .brands{
+     margin: 100px auto;
+ }
+ 
+ .col-5{
+     width: 160px;
+ }
+ 
+ .col-5 img{
+     width: 100%;
+     cursor: pointer;
+     filter: grayscale(100%);
+ }
+ 
+ .col-5 img:hover{
+     filter: grayscale(0%);
+ }
+ #row{
+     align-items: center;
+     flex-wrap: wrap;
+     justify-content: space-around;
+ }
+ .footer{
+     max-width: 100%;
+     background: #000;
+     color: #8a8a8a;
+     padding: 40px 20px;
+ }
+ 
+ .footer p {
+     color: #8a8a8a;
+ }
+ 
+ .footer h3{
+     color: #fff;
+     margin-bottom:30px ;
+ }
+ 
+ .footer-col-1 , .footer-col-2 , .footer-col-3 {
+     min-width: 250px;
+     margin-bottom: 20px;
+ }
+ 
+ 
+ .footer-col-2{
+     flex: 1;
+     text-align: center;
+ }
+ .footer-col-3{
+     margin-left: 1300px;
+     
+ }
+ .app-logo{
+     margin-top: 20px;
+ }
+ 
+ .app-logo img{
+     width: 140px;
+ }
+ 
+ .footer hr{
+     border: none;
+     background: #b5b5b5;
+     height: 1px;
+     margin: 20px 0;
+ }
+ 
+ .CopyRight{
+     text-align: center;
+ }
+ #row2{
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+     justify-content: space-around;
+ }
+
+
+
 
 .class1 {
     font-family: 'Times New Roman', Times, serif;
@@ -48,4 +408,4 @@ button:hover {
     color: gray;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-}
+} */
