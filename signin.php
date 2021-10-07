@@ -41,18 +41,14 @@ session_start();
 
     <body>
     <?php require("header.php");?>
-     <form method="POST" target="_self">
-            <div class="class1">
+    <section class="contact" id="contact">
+
+        <form method="POST" target="_self">
                 <legend style="text-align:center"><h2><b>Sign in</b></h2></legend>
-                <p>
                     <input type="text" name="username" id="username" placeholder="Username" required><br>
-                </p>
-                <p>
                     <input type="password" name="password" id="password" placeholder="Password" required><br>
-                </p>
-                    <button>Se connecter</button> 
-                    <p style="text-align:center"> Don’t you have an account? <a href="signup.php"> Sign Up </a><br>  </p>
-            </div>  
+                <button class="btn"> Se connecter</button> 
         </form>
+    </section>
     </body>
 </html>

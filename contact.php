@@ -4,24 +4,15 @@
 
     <body>
         <?php require("header.php");?>
-        <form method="POST" target="_self">
-
-            <div class="class1">
-                <legend style="text-align:center"><h2><b>Contactez Nous</b></h2></legend>
-                <p>
-                    <input type="text" name="name" id="name" placeholder="Nom et Prenom *" required>
-                </p>
-                <p>
-                    <input type="text" name="number" id="number" placeholder="Telephone *" required>
-                </p>
-                <p>
-                    <input type="text" name="email" id="email" placeholder="Adresse de messagerie *" required>
-                </p>
-                <p>
-                    <textarea name="message" id="message" placeholder="Message " required style="width: 856px; height: 145px; margin: 0px;"></textarea>
-                </p>
-                    <button>Envoyer</button> 
-            </div>  
-        </form>
+        <section class="contact" id="contact">
+        <h2>Pour nous <span>contacter</span></h2>
+            <form action="#">
+                <input type="text" placeholder="Nom">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Votre message...">
+                <button class="btn">Soumettre</button>
+            </form>
+        </section>
+        <?php require("footer.php");?>
     </body>
 </html>

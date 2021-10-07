@@ -20,25 +20,46 @@
            <p>Toutes nos équipes sont mobilisées pour vous accueillir en toute sécurité.</p>
         </div>
         <section class="vp-1" id="offre">
-        <h3>Nos denières acquisitions</h3>
+        <h3>Meilleures Chambres</h3>
         <div class="container">
             <div class="item">
                 <img src="./images/Chambre1.jpg" alt="maison-1">
                 <p>chambre 1</p>
+                <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                50 Reviews</p>
                 <div class="separator"></div>
-                <p>390 &#8364; - 420&#36;</p>
+                <p>price 390 &#8364; - 420&#36;</p>
             </div>
             <div class="item">
                 <img src="./images/Chambre2.jpg" alt="maison-2">
                 <p>chambre 2</p>
+                <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                37 Reviews</p>
                 <div class="separator"></div>
-                <p>390 &#8364; - 420&#36;</p>
+                <p>price 250 &#8364; - 320&#36;</p>
             </div>
             <div class="item">
                 <img src="./images/Chambre3.jpg" alt="maison-3">
                 <p>chambre 3</p>
+                <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                15 Reviews</p>
                 <div class="separator"></div>
-                <p>390 &#8364; - 420&#36;</p>
+                <p>price 300 &#8364; - 400&#36;</p>
             </div>
         </div>
     </section>
@@ -48,7 +69,7 @@
             <img src="./images/service1.jpg" alt="service1">
             <div>
                 <h2>le meilleur <span>home</span> service</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae adipisci blanditiis laudantium aliquam aspernatur nostrum nihil, laborum nam asperiores eaque est, vel id rerum! Illum maiores sapiente expedita eligendi qui!</p>
+                <p>Un nettoyage en profondeur de la maison et Approvisionnement alimentaire et ménager</p>
             </div>
         </div>
         <div class="services" id="services" style="margin-top:2rem;">
@@ -67,9 +88,7 @@
         </div>
     </section>
             <?php require("footer.php");?>
-            <script src="script.js">
-                
-            </script>
+            <script src="script.js"></script>
 
     </body>
 </html>
