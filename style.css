@@ -45,6 +45,15 @@ h2 {
     position: absolute;
     top: 9vh;
  }
+ /*form validation*/
+ .ng-valid{
+    /* background-color: #FFFFFF; */
+    border-bottom: 2px solid #088b0b;
+ }
+ .ng-invalid{
+    border-bottom: 2px solid #ff0000 !important;
+    /* background-color: #FFEBD6; */
+ }
   /*header*/
  header{
      background:rgba(27, 146, 211, 0);
@@ -389,7 +398,7 @@ h2{
 /*admin page*/
 /*message*/
 #messages{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background: url(images/message.jpg) no-repeat center center ;
     background-size: cover;
@@ -422,10 +431,17 @@ h2{
     background-color: #04AA6D;
     color: white;
   }
-/*reservation*/
-#reservation{
-    width: 100%;
+/*reservations in admin page*/
+#reservations{
+    background: url('images/reservations.jpg') center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: 100%; */
 }
+/*reservation page*/
 /*custom radiobutton*/
 .input-hidden {
     position: absolute;

@@ -37,12 +37,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         <section class="reservation form-temp" id="reservation">
             <h2>Réserver dés <span>maintenant</span></h2>
             <form action="reservation.php" method="POST" target="_self">
-                <input name="nom" type="text" placeholder="Nom">
-                <input name="phone" type="text" placeholder="numéro de téléphone">
+                <input oninput="validInputs()" name="nom" id="nom" type="text" placeholder="Nom" class="ng-invalid" >
+                <input oninput="validInputs()" name="phone" id="phone" type="text" placeholder="numéro de téléphone" class="ng-invalid" >
                 <label for="date_arrive">Date d'arrivé :</label>
-                <input type="date" class="date" name="date_arrive" id="date_arrive" />
+                <input oninput="validInputs()" type="date" class="date ng-invalid" name="date_arrive" id="date_arrive"/>
                 <label for="date_deppart">Date de départ :</label>
-                <input type="date" class="date" name="date_deppart" id="date_deppart" />
+                <input oninput="validInputs()" type="date" class="date ng-invalid" name="date_deppart" id="date_deppart"/>
                 <h2>choisir votre chambre </h2>
                 <label for="price">price</label>
                 <input type="text" name="price" id="price" placeholder="prix par nuit" readonly >
@@ -97,6 +97,55 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                     inputPrice=document.getElementById('price');
                     console.log(inputPrice.value);
                     inputPrice.value=price;
+                }
+                function validInputs(){
+                    nom=document.getElementById('nom');
+                    phone=document.getElementById('phone');
+                    date_arrive_input=document.getElementById('date_arrive');
+                    date_arrive=new Date(date_arrive_input.value);
+                    date_deppart_input=document.getElementById('date_deppart');
+                    date_deppart=new Date(date_deppart_input.value);
+
+                    now=new Date();
+                    /*validat name*/ 
+                    if(nom!="" && nom.value.length>=3){
+                        nom.classList.add('ng-valid');
+                        nom.classList.remove('ng-invalid');
+                    }else{
+                        nom.classList.add('ng-invalid');
+                        nom.classList.remove('ng-valid');
+                    }
+                    /*validate phone number*/
+                    if(phone!=isNaN && phone.value.length==10){
+                        phone.classList.add('ng-valid');
+                        phone.classList.remove('ng-invalid');
+                    }else{
+                        phone.classList.add('ng-invalid');
+                        phone.classList.remove('ng-valid');
+                    }
+                    /*validate dates*/
+                    if(date_arrive_input.value!=null && now<=date_arrive){
+                        
+                        console.log(now.getDate());
+                        console.log(date_arrive.getDate());
+                        date_arrive_input.classList.add('ng-valid');
+                        date_arrive_input.classList.remove('ng-invalid');
+                    }else{
+                        date_arrive_input.classList.add('ng-invalid');
+                        date_arrive_input.classList.remove('ng-valid');
+                    } 
+                    /*validate date arrive*/ 
+                    if(date_deppart_input.value!=null && date_arrive<date_deppart){
+                        console.log(now.getDate());
+                        console.log(date_deppart.getDate());
+                        date_deppart_input.classList.add('ng-valid');
+                        date_deppart_input.classList.remove('ng-invalid');
+                    }else{
+                        date_deppart_input.classList.add('ng-invalid');
+                        date_deppart_input.classList.remove('ng-valid');
+                    } 
+
+
                 }
             </script>
             <script src="script.js"></script>

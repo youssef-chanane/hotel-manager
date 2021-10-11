@@ -31,12 +31,43 @@ session_start();
         <section class="contact form-temp" id="contact">
         <h2>Pour nous <span>contacter</span></h2>
             <form action="#" method="POST" target="_self">
-                <input name="nom" type="text" placeholder="Nom">
-                <input name="email" type="email" placeholder="Email">
-                <input name="message" type="text" placeholder="Votre message...">
+                <input oninput="validInputs()" name="nom" type="text" placeholder="Nom" id="nom" class="ng-invalid">
+                <input oninput="validInputs()" name="email" type="email" placeholder="Email" id="email" class="ng-invalid">
+                <input oninput="validInputs()" name="message" type="text" placeholder="Votre message..." id="message" class="ng-invalid">
                 <button class="btn">Soumettre</button>
             </form>
         </section>
         <?php require("footer.php");?>
+        <script>
+            function validInputs(){
+                nom=document.getElementById('nom');
+                email=document.getElementById('email');
+                message=document.getElementById('message');
+                //validate nom
+                if(nom!="" && nom.value.length>=3){
+                    nom.classList.add('ng-valid');
+                    nom.classList.remove('ng-invalid');
+                }else{
+                    nom.classList.add('ng-invalid');
+                    nom.classList.remove('ng-valid');
+                }
+                //validate email
+                if(email.value!="" && email.value.includes('@')){
+                    email.classList.add('ng-valid');
+                    email.classList.remove('ng-invalid');
+                }else{
+                    email.classList.add('ng-invalid');
+                    email.classList.remove('ng-valid');
+                }
+                //validate message
+                if(message!="" && message.value.length>=10){
+                    message.classList.add('ng-valid');
+                    message.classList.remove('ng-invalid');
+                }else{
+                    message.classList.add('ng-invalid');
+                    message.classList.remove('ng-valid');
+                }    
+            }
+        </script>
     </body>
 </html>
