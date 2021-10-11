@@ -21,17 +21,17 @@ session_start();
                     if($user_data['Password'] === $Password)
                     {
                         $_SESSION['user_id'] = $user_data['user_id'];
-                        header("Location: index.php#");
+                        header("Location: admin.php");
                         die;
                     }
 
                 }
             }
-            echo"Please enter valid Password or Username!";
+            echo"<p class='alert'>Please enter valid Password or Username!</p>";
         }
         else
         {
-            echo"Please enter valid Password or Username!";
+            echo"<p class='alert'>Please enter valid Password or Username!</p>";
         }
     }
 ?>

@@ -15,6 +15,7 @@
      justify-content: center;
      align-items: center;
      font-family: 'Poppins', sans-serif;
+     background-color: #353b48;
  }
  ul{
      list-style-type: none;
@@ -36,7 +37,15 @@ h2 {
     text-align: center;
     color: white;
 }
- /*header*/
+.alert{
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 9vh;
+ }
+  /*header*/
  header{
      background:rgba(27, 146, 211, 0);
      position:fixed ;
@@ -70,6 +79,10 @@ h2 {
  }
 .fa-star{
     color: yellow;
+}
+/*disabled input*/
+input[type="text"]:read-only {
+	cursor: not-allowed;
 }
  /*main page*/
  /*vp*/
@@ -184,33 +197,33 @@ section{
     font-size: 1.2rem;
     width: 90%;
 }
-/*contact page*/
-.contact{
+/*contact and reservation form*/
+.form-temp{
     background-color: #353b48;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin-bottom: 0rem;
 }
-.contact form{
+ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.contact h2{
+h2{
     margin: 3rem 0rem;
     color: #dcdde1;
 
 }
-.contact h2 span{
+ h2 span{
     color: yellow;
 }
-.contact input{
+ input{
     border-radius: 0rem;
     background-color: #353b48;
     color: #636e72;
@@ -371,6 +384,138 @@ section{
     width: 5%;
     height: 5vh;
 }
+
+
+/*admin page*/
+/*message*/
+#messages{
+    height: 100vh;
+    width: 100%;
+    background: url(images/message.jpg) no-repeat center center ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 2rem auto;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr{background-color: #ffffff;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+/*reservation*/
+#reservation{
+    width: 100%;
+}
+/*custom radiobutton*/
+.input-hidden {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  input[type=radio]:checked + label>img {
+    border: 1px solid #fff;
+    box-shadow: 0 0 3px 3px #090;
+  }
+  
+  /* Stuff after this is only to make things more pretty */
+  input[type=radio] + label>img {
+    border: 1px dashed #444;
+    width: 100%;
+    height: 30vh;
+    margin-top: 2rem;
+    transition: 500ms all;
+  }
+  
+  input[type=radio]:checked + label>img {
+    transform: 
+      rotateZ(-10deg) 
+      rotateX(10deg);
+  }
+  .chambresContainer{
+      width: 100%;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  }
+  .chambresContainer label{
+      width: 80%;
+      margin: auto;
+  }
+  .price{
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      z-index: 10;
+      transform: translate(-50%, 200%);
+      color: black;
+      font-size: large !important;
+      font-weight: 900 !important;
+  }
+/* #reservation form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.date::-webkit-inner-spin-button,
+.date::-webkit-clear-button {
+  display: none;
+}
+.date::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1
+}
+
+.date::-webkit-calendar-picker-indicator:hover {
+  background: transparent;
+  cursor: pointer;
+}
+
+.date::-webkit-calendar-picker-indicator::after {
+  content: '';
+  display: block;
+  background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-512.png) no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -16px;
+}
+label{
+    font-size: large;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: #dfe6e9;
+    width: 25%;
+}
+
+/* #messages h1{
+    font-size: 2000;
+
+
+} */
+
  /* @keyframes Gallerie {
      0%
      {
